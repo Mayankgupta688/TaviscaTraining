@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.body-container {
+    padding: 15px;
+    margin: 15px;
+}
