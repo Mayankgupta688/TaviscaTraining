@@ -1,6 +1,10 @@
 <h1>List of Employees having salary above {{salary | currency : "INR"}}: </h1><br/><hr/><br/>
+<h2>{{currentTimeDisplay}}</h2>
 <div class="employee-container">
     <div class="card" *ngFor="let employee of empList">
-        <app-employee-details [employeeDetails]="employee"></app-employee-details>
+        <app-employee-details 
+            [emp]="employee" 
+            (deleteEvent)="deleteEmployee($event)">
+        </app-employee-details>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-employee-details',
@@ -6,5 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent {
-  @Input() employeeDetails: any;
+  @Input() emp: any;
+  @Output() deleteEvent = new EventEmitter<string>();
+
+  constructor() {}
+
+  deleteFromChild(empId: string) {
+    debugger;
+    this.deleteEvent.emit(empId);
+  }
 }

@@ -1,9 +1,9 @@
 <div>
-    <img [src]="employeeDetails.avatar" alt="{{employeeDetails.name}}" class="card-img-top">
+    <img [src]="emp.avatar" alt="{{emp.name}}" class="card-img-top">
     <div class="card-body">
-        <h5 class="card-title">{{employeeDetails.name | uppercase }}</h5>
-        <b *ngIf="(+employeeDetails.id) % 2 == 0">{{employeeDetails.name}} is Even</b>
+        <h5 class="card-title">{{emp.name | uppercase }}</h5>
+        <b *ngIf="(+emp.id) % 2 == 0">{{emp.name}} is Even</b>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <button type="button" class="btn btn-dark">Delete {{employeeDetails.name}}</button>
+        <button type="button" (click)="deleteFromChild(emp.id)" class="btn btn-dark">Delete {{emp.name}}</button>
     </div>
 </div>
