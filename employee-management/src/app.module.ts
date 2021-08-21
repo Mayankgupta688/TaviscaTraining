@@ -11,11 +11,15 @@ import { EmployeeDetailsComponent } from './app/employee-details/employee-detail
 import { EmployeeCountComponent } from './app/employee-count/employee-count.component';
 import { StockPriceComponent } from './app/stock-price/stock-price.component';
 import { InvokePriceComponent } from './app/invoke-price/invoke-price.component';
+import { TwoWatComponent } from './app/two-wat/two-wat.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { TransformPipe } from "./app/pipes/transform.pipe";
+import { ReactiveFormComponent } from './app/reactive-form/reactive-form.component';
 
 @NgModule({
-    declarations: [AppSecondComponent, AppThirdComponent, AppComponent, DataInterpolationComponent, EmployeeListComponent, EmployeeDetailsComponent, EmployeeCountComponent, StockPriceComponent, InvokePriceComponent],
-    imports: [ BrowserModule, HttpClientModule ],
-    bootstrap: [ StockPriceComponent, InvokePriceComponent ]
+    declarations: [TransformPipe, AppSecondComponent, AppThirdComponent, AppComponent, DataInterpolationComponent, EmployeeListComponent, EmployeeDetailsComponent, EmployeeCountComponent, StockPriceComponent, InvokePriceComponent, TwoWatComponent, ReactiveFormComponent],
+    imports: [ BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule ],
+    bootstrap: [ ReactiveFormComponent ]
 })
 export class AppModule {}
 

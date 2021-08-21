@@ -1,0 +1,21 @@
+<form [formGroup]="userDetailsForm" (ngSubmit)="submitFormFunction()">
+    <b>Enter User Name: 
+        <input type="text" id="name" 
+            formControlName="userName" /></b><br/><br/>
+    <b>Enter User Age: 
+        <input type="text" 
+            formControlName="userAge" /></b><br/><br/>
+    <b>Enter User Designation: 
+        <input type="text" 
+            formControlName="userDesignation" /></b><br/><br/>
+    <input type="submit" value="Submit Form" 
+        [disabled]="!userDetailsForm.valid" /><br/><br/>
+    <input type="submit" value="Submit Form" /><br/><br/>
+
+    Form Valid: {{userDetailsForm.valid}}
+
+    <div 
+        *ngIf="this.userDetailsForm.get('userName').errors.required">
+        <b style="color: red">Name is required.</b>
+    </div>
+</form>

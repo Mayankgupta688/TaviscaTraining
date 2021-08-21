@@ -1,0 +1,10 @@
+<h1>Working with Data : {{eventData}}</h1><br/><br/>
+
+<b class="input-text">Enter User Name</b><input type="text" [(ngModel)]="userName" >{{userName | replacePipe : "Mayank" : "Anshul"}}<br/><br/>
+<b class="input-text">Enter User Age </b><input type="text" [(ngModel)]="userAge">{{userAge}}<br/><br/>
+<b class="input-text">Enter User Designation</b><input type="text" [(ngModel)]="userDesignation">{{userDesignation | replacePipe : "@" : "_"}}<br/><br/>
+ 
+
+{{todayDate | date : 'EEEE, MMMM d, y'}}
+<input type="button" (click)="getValue()" value="Get Value" />
+<input type="button" (click)="updateValue()" value="Update Value" />

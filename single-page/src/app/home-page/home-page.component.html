@@ -1,0 +1,5 @@
+<div *ngFor="let employee of employees">
+    <b>User Name is: {{employee.name}}</b><br/><br/>
+    <input type="button" (click)="deleteEmployee(employee.id)" value="Delete {{employee.name}}" />
+    <input type="button" (click)="showDetails(employee.id, employee.name)" value="Show Details" /><hr/><br/><br/>
+</div>

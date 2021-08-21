@@ -1,0 +1,8 @@
+<h1>Getting Started With NgRx....</h1>
+
+<div *ngFor="let flight of flightsData">
+    <h2>Flight Name: {{flight.flightName}}</h2>
+    <h2>Flight Destination: {{flight.flightDestination}}</h2><br/><hr/>
+</div>
+
+<input type="button" value="Get Data" (click)="addData()" />

@@ -15,7 +15,6 @@ export class InvokePriceComponent {
   }
 
   getStockValue() {
-    debugger;
     this._dataService.invokeIdeaPrice.next("InvokePrice");
   }
 

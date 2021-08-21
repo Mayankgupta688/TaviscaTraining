@@ -1,0 +1,9 @@
+<h1>Getting Started With NgRx....</h1>
+
+<div *ngFor="let employee of employeeList">
+    <h2>Employee Name: {{employee.name}}</h2>
+    <h2>Employee Id: {{employee.id}}</h2><br/><hr/>
+</div>
+
+<input type="button" value="Clear Data" (click)="getData()" />
+<input type="button" value="Get Data" (click)="addData()" />

@@ -1,0 +1,8 @@
+.input-text {
+    width: 200px;
+    display: inline-block;
+}
+
+input {
+    margin-right: 10px;
+}
